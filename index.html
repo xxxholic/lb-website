@@ -107,6 +107,21 @@ small{
 	color: #fff;
 	text-shadow:0 0 10px #fff,0 -6px 10px rgba(255,255,255,.3),0 6px 10px rgba(255,255,255,.3)
 }
+.item-list .case:hover{
+    transform:scale(1.1);
+    -webkit-transform:scale(1.1);
+    transition:.2s;
+}
+.item-list .case:nth-child(3n+1){
+    transform-origin:left;
+    -webkit-transform-origin:left;
+    
+}
+.item-list .case:nth-child(3n+3){
+    transform-origin:right;
+    -webkit-transform-origin:right;
+    
+}
 </style>
 </head>
 <body>
@@ -117,6 +132,7 @@ small{
 </div>
 <h1 style="display:block;text-align:center;color:#fff;font-size:72px">Guild LittleBuster</h1>
 <div class="box-zone">
+    <div class="title">Team</div>
 	<ul class="item-list">
 		<li class="case">执行总裁－小铭心聚聚</li>
 		<li class="case">形象代言人－光老板</li>
