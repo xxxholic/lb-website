@@ -162,6 +162,10 @@ body{
     background: url(../images/bgimage.jpg) no-repeat;
     background-size: cover;
 }
+.body-main-bg-icc{
+    background: url(../images/icc.jpg) no-repeat;
+    background-size: cover;
+}
 a.round{
     transition:.5s;
     -webkit-transition:.5s;
@@ -242,35 +246,69 @@ footer{
 }
 
 .cl-text-dk{
-    background: rgba(196,30,59,1);
+    color: rgba(196,30,59,1);
 }
 .cl-text-xd{
-    background: rgba(255,125,10,1);
+    color: rgba(255,125,10,1);
 }
 .cl-text-lr{
-    background: rgba(171,212,115,1);
+    color: rgba(171,212,115,1);
 }
 .cl-text-fs{
-    background: rgba(105,204,240,1);
+    color: rgba(105,204,240,1);
 }
 .cl-text-qs{
-    background: rgba(245,140,186,1);
+    color: rgba(245,140,186,1);
 }
 .cl-text-ms{
-    background: rgba(255,255,255,1);
+    color: rgba(255,255,255,1);
 }
 .cl-text-dz{
-    background: rgba(255,245,105,1);
+    color: rgba(255,245,105,1);
 }
 .cl-text-sm{
-    background: rgba(0,112,222,1);
+    color: rgba(0,112,222,1);
 }
 .cl-text-ss{
-    background: rgba(148,130,201,1);
+    color: rgba(148,130,201,1);
 }
 .cl-text-zs{
-    background: rgba(199,156,110,1); 
+    color: rgba(199,156,110,1); 
 }
 .cl-text-ws{
-    background: rgba(5,239,182,.8);
+    color: rgba(5,239,182,.8);
+}
+.video-list{
+    display: block;
+}
+.video-list .half-item{
+    width: 480px;
+    height: 400px;
+    background: rgba(3,3,3,.2);
+    display: inline-block;
+    box-shadow: 2px 2px 2px rgba(12,12,12,.8);
+    margin-bottom: 60px;
+    text-align: center;
+    font-size: 40px;
+    line-height: 100px;
+    color: #fff;
+    text-shadow:0 0 10px #fff,0 -6px 10px rgba(255,255,255,.3),0 6px 10px rgba(255,255,255,.3);
+    position: relative;
+}
+.video-list .half-item:after{
+    content: '虎哥一炸19 惊艳全场';
+    color: #fff;
+    bottom: -80px;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.bg-lock{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
