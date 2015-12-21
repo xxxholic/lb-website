@@ -91,6 +91,8 @@ small{
 }
 .item-list .case{
 	width: 33%;
+    transition:.2s;
+    -webkit-transition:.2s;
 	height: 200px;
 	background: rgba(3,3,3,.2);
 	display: inline-block;
@@ -109,7 +111,6 @@ small{
 .item-list .case:hover{
     transform:scale(1.1);
     -webkit-transform:scale(1.1);
-    transition:.2s;
 }
 .item-list .case:nth-child(3n+1){
     transform-origin:left;
@@ -130,7 +131,21 @@ body{
 .box-zone .title{
     font-size: 26px;
     margin-left: 4px;
+    color: #fff;
+    cursor: default;
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
+}
+.db-text:after{
+    content: 'Main Team Members';
+    position: absolute;
+    left: 2px;
+    top: 2px;
     color: #999;
+    display: block;
+    z-index: 1;
+    opacity: .5
 }
 .entry-link{
     font-size: 50px;
@@ -147,7 +162,11 @@ body{
     background: url(../images/bgimage.jpg) no-repeat;
     background-size: cover;
 }
-a.round,a.round:link, a.round:visited {
+a.round{
+    transition:.5s;
+    -webkit-transition:.5s;
+}
+a.round{
     width: 140px;
     color: #fff;
     font: 28px/30px LeagueGothicRegular;
@@ -179,8 +198,79 @@ a.round:active {
     color: #999;
 }
 .main-title{
-    display:block;text-align:center;color:#fff;font-size:72px
+    display:block;text-align:center;color:#fff;font-size:72px;cursor: default;
 }
 footer{
     margin-top:50px;
+}
+.cl-bg-dk:hover{
+    background: rgba(196,30,59,.8);
+}
+.cl-bg-xd:hover{
+    background: rgba(255,125,10,.8);
+}
+.cl-bg-lr:hover{
+    background: rgba(171,212,115,.8);
+}
+.cl-bg-fs:hover{
+    background: rgba(105,204,240,.8);
+}
+.cl-bg-qs:hover{
+    background: rgba(245,140,186,.8);
+}
+.cl-bg-ms:hover{
+    background: rgba(255,255,255,.8);
+    color: #FFA500;
+}
+.cl-bg-ms:hover .title{
+    color: #FFA500;
+}
+.cl-bg-dz:hover{
+    background: rgba(255,245,105,.8);
+}
+.cl-bg-sm:hover{
+    background: rgba(0,112,222,.8);
+}
+.cl-bg-ss:hover{
+    background: rgba(148,130,201,.8);
+}
+.cl-bg-zs:hover{
+    background: rgba(199,156,110,.8); 
+}
+.cl-bg-ws:hover{
+    background: rgba(5,239,182,.8);
+}
+
+.cl-text-dk{
+    background: rgba(196,30,59,1);
+}
+.cl-text-xd{
+    background: rgba(255,125,10,1);
+}
+.cl-text-lr{
+    background: rgba(171,212,115,1);
+}
+.cl-text-fs{
+    background: rgba(105,204,240,1);
+}
+.cl-text-qs{
+    background: rgba(245,140,186,1);
+}
+.cl-text-ms{
+    background: rgba(255,255,255,1);
+}
+.cl-text-dz{
+    background: rgba(255,245,105,1);
+}
+.cl-text-sm{
+    background: rgba(0,112,222,1);
+}
+.cl-text-ss{
+    background: rgba(148,130,201,1);
+}
+.cl-text-zs{
+    background: rgba(199,156,110,1); 
+}
+.cl-text-ws{
+    background: rgba(5,239,182,.8);
 }
