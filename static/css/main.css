@@ -201,7 +201,7 @@ a.round:active {
     display:block;text-align:center;color:#fff;font-size:72px;cursor: default;
 }
 footer{
-    margin-top:50px;
+    margin:50px 0;
 }
 .cl-bg-dk:hover{
     background: rgba(196,30,59,.8);
