@@ -172,7 +172,7 @@ a.round{
 }
 a.round{
     width: 140px;
-    color: #fff;
+    color: #eee;
     font: 28px/30px LeagueGothicRegular;
     text-transform: uppercase;
     text-shadow: #6f0909 0 -1px 1px;
@@ -188,18 +188,19 @@ a.round{
     background: transparent;
 }
 
-a.round:hover {
+a.round:active {
     -moz-box-shadow: rgba(255,255,255,1) 0 0 10px, rgba(255,255,255,1) 0 0 15px, inset rgba(255,255,255,.8) 0 2px 4px;
     -webkit-box-shadow: rgba(255,255,255,1) 0 0 10px, rgba(255,255,255,1) 0 0 15px, inset rgba(255,255,255,.8) 0 2px 4px;
     box-shadow: rgba(255,255,255,1) 0 0 10px, rgba(255,255,255,1) 0 0 15px, inset rgba(255,255,255,.8) 0 2px 4px;
 }
 
-a.round:active {
-    -moz-box-shadow: rgba(255,255,255,1) 0 0 20px, rgba(255,255,255,1) 0 0 30px , inset rgba(0,0,0,.5) 0 4px 4px;
-    -webkit-box-shadow: rgba(255,255,255,1) 0 0 20px, rgba(255,255,255,1) 0 0 30px , inset rgba(0,0,0,.5) 0 4px 4px;
-    box-shadow: rgba(255,255,255,1) 0 0 20px, rgba(255,255,255,1) 0 0 30px , inset rgba(0,0,0,.5) 0 4px 4px;
+a.round:hover {
+    -moz-box-shadow: inset rgba(0,0,0,.5) 0 4px 4px;
+    -webkit-box-shadow:  inset rgba(0,0,0,.5) 0 4px 4px;
+    box-shadow: inset rgba(0,0,0,.5) 0 4px 4px;
     background: rgba(0,0,0,.1);
-    color: #999;
+    color: #fff;
+    text-shadow:0 0 10px #fff,0 -6px 10px rgba(255,255,255,.3),0 6px 10px rgba(255,255,255,.3)
 }
 .main-title{
     display:block;text-align:center;color:#fff;font-size:72px;cursor: default;
