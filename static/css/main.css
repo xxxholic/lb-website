@@ -211,21 +211,39 @@ footer{
 .cl-bg-dk:hover{
     background: rgba(196,30,59,.8);
 }
+.cell.dk .energybar{
+    background: rgba(196,30,59,1);
+}
 .cl-bg-xd:hover{
     background: rgba(255,125,10,.8);
+}
+.cell.xd .energybar{
+    background: rgba(255,125,10,1);
 }
 .cl-bg-lr:hover{
     background: rgba(171,212,115,.8);
 }
+.cell.lr .energybar{
+    background: rgba(171,212,115,1);
+}
 .cl-bg-fs:hover{
     background: rgba(105,204,240,.8);
+}
+.cell.fs .energybar{
+    background: rgba(105,204,240,1);
 }
 .cl-bg-qs:hover{
     background: rgba(245,140,186,.8);
 }
+.cell.qs .energybar{
+    background: rgba(245,140,186,1);
+}
 .cl-bg-ms:hover{
     background: rgba(255,255,255,.8);
     color: #FFA500;
+}
+.cell.ms .energybar{
+    background: rgba(255,255,255,1);
 }
 .cl-bg-ms:hover .title{
     color: #FFA500;
@@ -233,50 +251,65 @@ footer{
 .cl-bg-dz:hover{
     background: rgba(255,245,105,.8);
 }
+.cell.dz .energybar{
+    background: rgba(255,245,105,1);
+}
 .cl-bg-sm:hover{
     background: rgba(0,112,222,.8);
+}
+.cell.sm .energybar{
+    background: rgba(0,112,222,1);
 }
 .cl-bg-ss:hover{
     background: rgba(148,130,201,.8);
 }
+.cell.ss .energybar{
+    background: rgba(148,130,201,1);
+}
 .cl-bg-zs:hover{
     background: rgba(199,156,110,.8); 
+}
+.cell.zs .energybar{
+    background: rgba(199,156,110,1); 
 }
 .cl-bg-ws:hover{
     background: rgba(5,239,182,.8);
 }
+.cell.ws .energybar{
+    background: rgba(5,239,182,1);
+}
 
-.cl-text-dk{
+.cl-text-dk,.cell.dk .name{
     color: rgba(196,30,59,1);
 }
-.cl-text-xd{
+.cl-text-xd,.cell.xd .name{
     color: rgba(255,125,10,1);
 }
-.cl-text-lr{
+.cl-text-lr,.cell.lr .name{
     color: rgba(171,212,115,1);
 }
-.cl-text-fs{
+.cl-text-fs,.cell.fs .name{
     color: rgba(105,204,240,1);
 }
-.cl-text-qs{
+.cl-text-qs,.cell.qs .name{
     color: rgba(245,140,186,1);
 }
-.cl-text-ms{
+.cl-text-ms,.cell.ms .name{
     color: rgba(255,255,255,1);
 }
-.cl-text-dz{
+.cl-text-dz,.cell.dz .name{
     color: rgba(255,245,105,1);
 }
-.cl-text-sm{
+.cl-text-sm,.cell.sm .name{
     color: rgba(0,112,222,1);
 }
-.cl-text-ss{
+.cl-text-ss,.cell.ss .name{
     color: rgba(148,130,201,1);
 }
-.cl-text-zs{
+.cl-text-zs,.cell.zs .name{
     color: rgba(199,156,110,1); 
 }
-.cl-text-ws{
+.cl-text-ws,.cell.ws .name{
     color: rgba(5,239,182,.8);
 }
 .video-list{
@@ -312,4 +345,197 @@ footer{
     width: 100%;
     height: 100%;
     z-index: -1;
+}
+.grid {
+    width: 400px;
+    height: 220px;
+    display: block;
+    position: fixed;
+    left: 50%;
+    bottom: 10%;
+    margin-left: -200px;
+}
+.grid .grid-row{
+    display: inline-block;
+}
+.grid .grid-row .cell{
+    width: 90px;
+    text-align: center;
+    height: 40px;
+    margin: 0 4px 4px 0;
+    background: #341209;
+    color: #fff;
+    display: block;
+    position: relative;
+    cursor: hand;
+}
+.cell .name{
+    position: relative;
+    z-index: 2;
+    text-shadow:0 0 2px #222;
+    display: block;
+    -webkit-transform: translateY(6px);
+       -moz-transform: translateY(6px);
+        -ms-transform: translateY(6px);
+         -o-transform: translateY(6px);
+            transform: translateY(6px);
+}
+.cell.on:after{
+    content: '';
+    width: 90px;
+    left: -2px;
+    top: -2px;
+    height: 40px;
+    z-index: 1;
+    position: absolute;
+    border:2px solid #e5004f;
+}
+/*hp bar*/
+.hpbar{
+    background: #666;
+    width: 98%;
+    height: 100%;
+    position: absolute;
+    left: 1%;
+    top: 0;
+    z-index: 1;
+    -webkit-transition: all .25s ease-in-out;
+       -moz-transition: all .25s ease-in-out;
+        -ms-transition: all .25s ease-in-out;
+         -o-transition: all .25s ease-in-out;
+            transition: all .25s ease-in-out;
+}
+.hpbar.hp50{
+    width: 50%;
+    background: #817b47;
+}
+.hpbar.hp20{
+    width: 20%;
+    background: #c73b24;
+}
+.hpbar.dead{
+    width: 0;
+    background: #c73b24;
+}
+.hpbar.dead:after{
+    content: 'DEAD';
+    color: #fff;
+    text-shadow:0 0 2px #000;
+    position: absolute;
+    bottom: 0;
+    left: 24px;
+}
+/*energy bar*/
+.energybar{
+    border:1px solid #000;
+    background: blue;
+    position: absolute;
+    bottom: 0;
+    width: 88px;
+    height: 8px;
+    z-index: 10;
+}
+.pos.tank:after{
+    position: absolute;
+    content: '';
+    background: url(.././images/tank.png) no-repeat;
+    background-size: contain;
+    background-position: center center;
+    width: 16px;
+    height: 16px;
+    color: blue;
+    left: -7px;
+    top: 11px;
+    z-index: 11;
+}
+.pos.healer:after{
+    position: absolute;
+    content: '';
+    background: url(.././images/healer.png) no-repeat;
+    background-size: contain;
+    background-position: center center;
+    width: 16px;
+    height: 16px;
+    color: blue;
+    left: -7px;
+    top: 11px;
+    z-index: 11;
+}
+.pos.dps:after{
+    position: absolute;
+    content: '';
+    background: url(.././images/dps.png) no-repeat;
+    background-size: contain;
+    background-position: center center;
+    width: 16px;
+    height: 16px;
+    color: blue;
+    left: -7px;
+    top: 11px;
+    z-index: 11;
+}
+.stage{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #333;
+}
+.stage .user-intro{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+}
+.user-intro .h1{
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 9px;
+}
+.stage .user-intro .user{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -o-box;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 0;
+    -webkit-transition: all .25s ease-in-out;
+       -moz-transition: all .25s ease-in-out;
+        -ms-transition: all .25s ease-in-out;
+         -o-transition: all .25s ease-in-out;
+            transition: all .25s ease-in-out;
+}
+.stage .user-intro .user.on{
+    opacity: 1;
+}
+.stage .user-intro .user .mainpic{
+    width: 40%;
+    height: 100%;
+    background-color: #000;
+}
+.stage .user-intro .user .intro{
+    width: 60%;
+    height: 100%;
+    background: #ffe;
+    padding: 10px;
+}
+.hide{
+    display: none!important;
+}
+.mainpic.wuzui{
+    background-image: url(.././images/intro/wuzui.png);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.mainpic.jimie{
+    background-image: url(.././images/intro/jimie.jpg);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
