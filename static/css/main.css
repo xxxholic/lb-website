@@ -539,3 +539,9 @@ footer{
     background-position: center center;
     background-repeat: no-repeat;
 }
+.mainpic.huge{
+    background-image: url(.././images/intro/huge.jpg);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
