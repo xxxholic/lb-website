@@ -527,19 +527,19 @@ footer{
 .hide{
     display: none!important;
 }
-.mainpic.wuzui{
+.user.on .mainpic.wuzui{
     background-image: url(.././images/intro/wuzui.png);
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
 }
-.mainpic.jimie{
+.user.on .mainpic.jimie{
     background-image: url(.././images/intro/jimie.jpg);
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
 }
-.mainpic.huge{
+.user.on .mainpic.huge{
     background-image: url(.././images/intro/huge.jpg);
     background-size: contain;
     background-position: center center;
