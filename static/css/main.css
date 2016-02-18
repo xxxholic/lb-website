@@ -353,7 +353,8 @@ footer{
     position: fixed;
     left: 50%;
     bottom: 10%;
-    margin-left: -200px;
+    margin-left: -193px;
+    z-index: 1000;
 }
 .grid .grid-row{
     display: inline-block;
@@ -493,6 +494,10 @@ footer{
     font-size: 24px;
     line-height: 24px;
     margin-bottom: 9px;
+    padding: 0 10px;
+}
+.user-intro .h1.title{
+    margin-top: 25%;
 }
 .stage .user-intro .user{
     height: 100%;
@@ -504,11 +509,11 @@ footer{
     display: -ms-flexbox;
     display: flex;
     opacity: 0;
-    -webkit-transition: all .25s ease-in-out;
-       -moz-transition: all .25s ease-in-out;
-        -ms-transition: all .25s ease-in-out;
-         -o-transition: all .25s ease-in-out;
-            transition: all .25s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+       -moz-transition: all .5s ease-in-out;
+        -ms-transition: all .5s ease-in-out;
+         -o-transition: all .5s ease-in-out;
+            transition: all .5s ease-in-out;
 }
 .stage .user-intro .user.on{
     opacity: 1;
@@ -517,12 +522,14 @@ footer{
     width: 40%;
     height: 100%;
     background-color: #000;
+    padding: 10px 0;
+    overflow: hidden;
 }
 .stage .user-intro .user .intro{
     width: 60%;
     height: 100%;
     background: #ffe;
-    padding: 10px;
+    padding: 10px 0;
 }
 .hide{
     display: none!important;
@@ -544,4 +551,17 @@ footer{
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
+}
+/* Mobile width<700px */
+@media screen and (max-width: 700px){
+    .grid{
+        zoom:.8;
+        bottom: 10px;
+    }
+    .stage .user-intro .user{
+        height: 50%;
+    }
+    .user-intro .h1{
+        margin-top: 30%;
+    }
 }
